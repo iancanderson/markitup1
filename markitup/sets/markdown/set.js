@@ -14,7 +14,7 @@ mySettings = {
     previewTemplatePath:    '/javascripts/markitup1/markitup/templates/preview.html',
 	previewParserPath:	'/notes/parse_markdown',
     previewContainerId: 'tabs-1',
-    previewByDefault:   false,
+    previewByDefault:   true,
 	onShiftEnter:		{keepDefault:false, openWith:'\n\n'},
 	markupSet: [
 		{name:'First Level Heading', key:'1', placeHolder:'Your title here...', closeWith:function(markItUp) { return miu.markdownTitle(markItUp, '=') } },
