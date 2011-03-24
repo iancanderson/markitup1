@@ -14,6 +14,7 @@ mySettings = {
     previewTemplatePath:    '/javascripts/markitup1/markitup/templates/preview.html',
 	previewParserPath:	'/notes/parse_markdown',
     previewContainerId: 'tabs-1',
+    previewByDefault:   false,
 	onShiftEnter:		{keepDefault:false, openWith:'\n\n'},
 	markupSet: [
 		{name:'First Level Heading', key:'1', placeHolder:'Your title here...', closeWith:function(markItUp) { return miu.markdownTitle(markItUp, '=') } },
@@ -35,9 +36,7 @@ mySettings = {
 		{name:'Link', key:'L', openWith:'[', closeWith:']([![Url:!:http://]!] "[![Title]!]")', placeHolder:'Your text to link here...' },
 		{separator:'---------------'},	
 		{name:'Quotes', openWith:'> '},
-		{name:'Code Block / Code', openWith:'(!(\t|!|`)!)', closeWith:'(!(`)!)'},
-		{separator:'---------------'},
-		{name:'Preview', call:'preview', className:"preview"}
+		{name:'Code Block / Code', openWith:'(!(\t|!|`)!)', closeWith:'(!(`)!)'}
 	]
 }
 
