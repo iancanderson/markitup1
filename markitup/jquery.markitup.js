@@ -39,6 +39,7 @@
 					previewParserPath:		'',
 					previewParserVar:		'data',
                     previewContainerId:      '',
+                    previewByDefault:       false,
 					resizeHandle:			true,
 					beforeInsert:			'',
 					afterInsert:			'',
@@ -141,6 +142,10 @@
 				$$.focus(function() {
 					$.markItUp.focused = this;
 				});
+
+                if (options.previewByDefault) {
+                    preview();
+                }
 			}
 
 			// recursively build header with dropMenus from markupset
