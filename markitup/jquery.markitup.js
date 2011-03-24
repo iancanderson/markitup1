@@ -38,6 +38,7 @@
 					previewTemplatePath:	'~/templates/preview.html',
 					previewParserPath:		'',
 					previewParserVar:		'data',
+                    previewContainerId:      '',
 					resizeHandle:			true,
 					beforeInsert:			'',
 					afterInsert:			'',
@@ -427,7 +428,10 @@
 						});
 					} else {
 						iFrame = $('<iframe class="markItUpPreviewFrame"></iframe>');
-						if (options.previewPosition == 'after') {
+						if (options.previewContainerId != '') {
+                            iFrame.appendTo("#" + options.previewContainerId)
+                        }
+                        else if (options.previewPosition == 'after') {
 							iFrame.insertAfter(footer);
 						} else {
 							iFrame.insertBefore(header);
